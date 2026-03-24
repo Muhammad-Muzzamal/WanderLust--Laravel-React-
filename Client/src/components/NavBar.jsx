@@ -1,4 +1,5 @@
 import React from 'react';
+import { Menu, Globe, Search } from 'lucide-react'
 
 const Navbar = () => {
   return (
@@ -17,7 +18,6 @@ const Navbar = () => {
         <div className="flex-grow sm:flex-grow-0">
           <div className="flex items-center border border-gray-300 rounded-full py-2 pl-4 pr-2 shadow-sm hover:shadow-md transition cursor-pointer w-full sm:w-auto">
             <div className="flex items-center gap-3 pr-2 md:pr-4">
-              <span className="text-sm md:text-lg">🏠</span>
               <span className="text-[12px] md:text-[14px] font-semibold text-gray-800 whitespace-nowrap">Anywhere</span>
             </div>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className="flex items-center gap-2 md:gap-3 pl-2 md:pl-4">
               <button className="text-[12px] md:text-[14px] font-normal text-gray-500 whitespace-nowrap">Add guests</button>
               <div className="bg-[#FF385C] p-1.5 md:p-2.5 rounded-full text-white">
-                <svg viewBox="0 0 32 32" className="h-3 w-3 fill-none stroke-current stroke-[4px]"><path d="m13 24c6.0751322 0 11-4.9248678 11-11s-4.9248678-11-11-11-11 4.9248678-11 11 4.9248678 11 11 11zm8-8 9 9"></path></svg>
+                <Search/>
               </div>
             </div>
           </div>
@@ -39,18 +39,18 @@ const Navbar = () => {
         {/* 3. RIGHT: Profile Section (Separated) */}
         <div className="flex items-center justify-end flex-1 gap-1">
           {/* Hidden on small tablets and mobile */}
-          <div className="hidden md:block text-[14px] font-semibold py-3 px-4 rounded-full hover:bg-gray-100 cursor-pointer transition">
+          <div className="hidden md:block text-[14px] font-semibold py-3 px-4 rounded-full hover:bg-gray-100 cursor-pointer transition text-[#222222]">
             Become a host
           </div>
 
-          <div className="hidden sm:block p-3 rounded-full hover:bg-gray-100 cursor-pointer transition">
-            <svg viewBox="0 0 16 16" className="h-4 w-4 fill-gray-600"><path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm0 1.5a6.25 6.25 0 0 0 -6.24 6.25c0 3.453 2.793 6.25 6.24 6.25 3.453 0 6.25-2.797 6.25-6.25s-2.797-6.25-6.25-6.25zm5.147 9.484a.75.75 0 0 1 1.06 1.061 5.25 5.25 0 0 1 -1.06-1.061zm-10.294 1.061a.75.75 0 0 1 1.06-1.06 5.25 5.25 0 0 1 -1.06 1.06zm7.294-8.195a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm-4.3 0a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zm2.15 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm0 1.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg>
+          <div className="hidden sm:block p-3 rounded-full bg-gray-100 cursor-pointer text-xs">
+            <Globe className={`text-[#222222]`}/>
           </div>
 
           {/* Profile Button */}
-          <div className="flex items-center gap-3 border border-gray-300 rounded-full py-1.5 px-2 hover:shadow-md transition cursor-pointer bg-white ml-2">
-            <svg viewBox="0 0 32 32" className="h-4 w-4 fill-none stroke-gray-600 stroke-[3px] ml-1"><path d="m2 16h28m-28-10h28m-28 20h28"></path></svg>
-            
+          <div className="hidden sm:block p-3 rounded-full bg-gray-100 cursor-pointer">
+            <Menu className={`text-[#222222]`}/>
+
           </div>
         </div>
 
