@@ -16,4 +16,8 @@ class Listing extends Model
         'image_url',
         'is_guest_favorite',
     ];
+    public function reviews()
+{
+    return $this->hasMany(Review::class);
+}
 }
